@@ -8,27 +8,27 @@ import { LuGraduationCap } from "react-icons/lu";
 
 export const links = [
   {
-    name: "Home",
+    name: "首页",
     hash: "#home",
   },
   {
-    name: "About",
+    name: "关于",
     hash: "#about",
   },
   {
-    name: "Projects",
+    name: "项目",
     hash: "#projects",
   },
   {
-    name: "Skills",
+    name: "技能",
     hash: "#skills",
   },
   {
-    name: "Experience",
+    name: "经历",
     hash: "#experience",
   },
   {
-    name: "Contact",
+    name: "联系我",
     hash: "#contact",
   },
 ] as const;
