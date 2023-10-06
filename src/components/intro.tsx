@@ -7,9 +7,11 @@ import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
+import { useActiveSectionContext } from "@/context/active-section-context";
 
 export default function Intro() {
   const { ref } = useSectionInView("首页", 1);
+  const {setActiveSection,setTimeOfLastClick} = useActiveSectionContext()
   return (
     <section
       ref={ref}
@@ -74,6 +76,10 @@ export default function Intro() {
         <Link
           href="#contact"
           className="group flex items-center gap-2 rounded-full bg-gray-900 px-7 py-3 text-white outline-none transition hover:scale-110 hover:bg-gray-950 focus:scale-110 active:scale-105"
+          onClick={() => {
+            setActiveSection("联系我")
+            setTimeOfLastClick(Date.now())
+          }}
         >
           联系我{" "}
           <BsArrowRight className="opacity-70 transition group-hover:translate-x-1" />
