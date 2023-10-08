@@ -29,7 +29,7 @@ export default function Intro() {
             }}
           >
             <Image
-              src="/avatar.png"
+              src="/avatar.jpg"
               alt="Ricardo portrait"
               width="192"
               height="192"
@@ -61,7 +61,7 @@ export default function Intro() {
         Hello，我是<span className="font-bold">QingYuanO</span> 我是一个有{" "}
         <span className="font-bold">四年开发经验</span> 的{" "}
         <span className="font-bold">前端开发工程师。</span> 享受创造
-        <span className="italic">sites & apps</span>， 主要专注于{" "}
+        <span className="italic">sites & apps</span>，开发过多个中后台以及移动端应用，主要专注于{" "}
         <span className="underline">React</span>。
       </motion.p>
 

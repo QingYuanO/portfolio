@@ -8,16 +8,26 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
+import { useInView } from "react-intersection-observer";
 const theme = "light";
 export default function Experience() {
   const { ref } = useSectionInView("经历");
+  const { ref:eRef, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
   return (
-    <section ref={ref} id="experience" className="mb-28 scroll-mt-28 sm:mb-40">
+    <section
+      ref={ref}
+      id="experience"
+      className="mb-28 w-[min(100%,60rem)] scroll-mt-28 sm:mb-40"
+    >
+      <div ref={eRef}></div>
       <SectionHeading>经历</SectionHeading>
       <VerticalTimeline lineColor="" animate>
         {experiencesData.map((item, index) => (
           <VerticalTimelineElement
-            visible
+            visible={inView}
             key={index}
             contentStyle={{
               background:

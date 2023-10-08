@@ -35,52 +35,75 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "桂林电子科技大学信息科技学院",
+    location: "广西桂林",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+      "大学本科，软件工程专业，在这里度过了愉快的大学生活。",
     icon: React.createElement(LuGraduationCap),
-    date: "2019",
+    date: "2016-2020",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "前端开发工程师",
+    location: "广西柳州",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "大四那年在柳州实习了一年，在那里我通过自学React,从此走上了前端开发的道路，提一句，挺怀念那的螺蛳粉的",
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    date: "2019 - 2020",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "前端开发工程师",
+    location: "广东深圳",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+      "正式从事的第一份工作，在这里开始接触微信小程序、RN等移动端的东西，第一次完整的独立写完一整个项目。",
     icon: React.createElement(FaReact),
-    date: "2021 - present",
+    date: "2020 - 2021",
+  },
+  {
+    title: "前端开发工程师",
+    location: "广东深圳",
+    description:
+      "开始接触Taro，并独立负责了一个项目，开始喜欢上Tailwind，觉得不用起类名真的太棒了。",
+    icon: React.createElement(FaReact),
+    date: "2021 - 至今",
   },
 ] as const;
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "爱文集",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: '/corpcomment.png',
+      "爱⽂集是⼀款集阅读/收集⽂章、推⼴植⼊、获取客⼾线索等功能的综合性⽂章营销⼩程序⼯具。",
+    tags: ["React", "Taro", "Redux", "Redux Toolkit", "Tailwind"],
+    imageUrl: "/aiwenji.png",
   },
   {
-    title: "rmtDev",
+    title: "菜菜到家",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: '/rmtdev.png',
+      "菜菜到家是⼀整套电商系统，包含⼩程序、ios、android平台渠道以及相应的后台管理。",
+    tags: [
+      "React",
+      "TypeScript",
+      "Expo",
+      "React Native",
+      "Redux",
+      "原生小程序",
+    ],
+    imageUrl: "/ccdj.jpg",
   },
   {
-    title: "Word Analytics",
+    title: "风控系统",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: '/wordanalytics.png',
+      "公司的主营项⽬，已经迭代5年，基于此系统，搭建了⼀系列定制化的中后台。",
+    tags: ["React", "Redux", "React PDF", "Antd"],
+    imageUrl: "/fk.png",
+  },
+
+  {
+    title: "资产管理App",
+    description:
+      "该项⽬主要的需求是完成⼀个资产管理的 APP ，主要⽤于管理甲⽅内部的各种资产。",
+    tags: ["React", "TypeScript", "Expo", "React Native", "Redux"],
+    imageUrl: "/zcgl.jpg",
   },
 ] as const;
 
@@ -90,18 +113,21 @@ export const skillsData = [
   "JavaScript",
   "TypeScript",
   "React",
+  "React Native",
   "Next.js",
+  "Taro",
+  "Umi",
   "Node.js",
   "Git",
   "Tailwind",
-  "Prisma",
-  "MongoDB",
   "Redux",
-  "GraphQL",
-  "Apollo",
-  "Express",
-  "PostgreSQL",
-  "Python",
-  "Django",
+  "React Toolkit",
+  "Zustand",
+  "Jotai",
+  "Radix",
+  "Ant Design",
+  "Tamagui",
   "Framer Motion",
+  "Webpack",
+  "Vite",
 ] as const;
