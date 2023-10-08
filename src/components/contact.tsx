@@ -1,9 +1,10 @@
-'use client'
+"use client";
 import React from "react";
 import SectionHeading from "./section-heading";
 import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
 import { FaPaperPlane } from "react-icons/fa";
+import { sendEmail } from "@/actions/sendEmail";
 
 export default function Contact() {
   const { ref } = useSectionInView("联系我");
@@ -15,7 +16,7 @@ export default function Contact() {
       viewport={{ once: true }}
       ref={ref}
       id="contact"
-      className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center"
+      className="mb-20 w-[min(100%,38rem)] text-center sm:mb-28"
     >
       <SectionHeading>联系我</SectionHeading>
       <p className="-mt-6 text-gray-700 dark:text-white/80">
@@ -26,9 +27,14 @@ export default function Contact() {
         或者填写下方表单
       </p>
 
-      <form className="mt-10 flex flex-col dark:text-black">
+      <form
+        className="mt-10 flex flex-col dark:text-black"
+        action={async (formData) => {
+          await sendEmail(formData);
+        }}
+      >
         <input
-          className="borderBlack outline-black h-14 rounded-lg px-4 transition-all dark:bg-white dark:bg-opacity-80 dark:outline-none dark:focus:bg-opacity-100"
+          className="borderBlack h-14 rounded-lg px-4 outline-black transition-all dark:bg-white dark:bg-opacity-80 dark:outline-none dark:focus:bg-opacity-100"
           name="senderEmail"
           type="email"
           required
@@ -36,7 +42,7 @@ export default function Contact() {
           placeholder="你的邮箱"
         />
         <textarea
-          className="borderBlack outline-black my-3 h-52 rounded-lg p-4 transition-all dark:bg-white dark:bg-opacity-80 dark:outline-none dark:focus:bg-opacity-100"
+          className="borderBlack my-3 h-52 rounded-lg p-4 outline-black transition-all dark:bg-white dark:bg-opacity-80 dark:outline-none dark:focus:bg-opacity-100"
           name="message"
           placeholder="你的信息"
           required
