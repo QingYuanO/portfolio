@@ -18,7 +18,7 @@ export default function About() {
     >
       <SectionHeading>关于我</SectionHeading>
       <p className="mb-3">
-        我也是一个终身学习者，对新技术抱有很大的兴趣，喜欢不断的探索。
+        终身学习的坚定拥护者，不断探索新技术的掘金人，对新技术抱有很大的兴趣，喜欢不断的探索。
         我喜欢Coding中解决问题的过程，它让人很投入，进入
         <span className="font-bold">心流</span>状态。
         自从毕业以后一直身居开发一线，对前端技术有着深刻的理解。我的主要技术栈是{" "}

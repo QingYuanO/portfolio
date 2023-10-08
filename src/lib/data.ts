@@ -1,6 +1,7 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
+import { TbBrandWechat } from "react-icons/tb";
 import { LuGraduationCap } from "react-icons/lu";
 // import corpcommentImg from "@/public/corpcomment.png";
 // import rmtdevImg from "@/public/rmtdev.png";
@@ -46,7 +47,7 @@ export const experiencesData = [
     title: "前端开发工程师",
     location: "广西柳州",
     description:
-      "大四那年在柳州实习了一年，在那里我通过自学React,从此走上了前端开发的道路，提一句，挺怀念那的螺蛳粉的",
+      "大四那年在柳州实习了一年，在那里我通过自学React,从此走上了前端开发的道路，挺怀念那的螺蛳粉的。",
     icon: React.createElement(CgWorkAlt),
     date: "2019 - 2020",
   },
@@ -55,14 +56,14 @@ export const experiencesData = [
     location: "广东深圳",
     description:
       "正式从事的第一份工作，在这里开始接触微信小程序、RN等移动端的东西，第一次完整的独立写完一整个项目。",
-    icon: React.createElement(FaReact),
+    icon: React.createElement(TbBrandWechat),
     date: "2020 - 2021",
   },
   {
     title: "前端开发工程师",
     location: "广东深圳",
     description:
-      "开始接触Taro，并独立负责了一个项目，开始喜欢上Tailwind，觉得不用起类名真的太棒了。",
+      "开始接触Taro，并独立负责了一个项目，开始喜欢上Tailwind，觉得不用起类名真的太棒了，同时觉得写让别人看的懂的代码很重要。",
     icon: React.createElement(FaReact),
     date: "2021 - 至今",
   },
@@ -101,7 +102,7 @@ export const projectsData = [
   {
     title: "资产管理App",
     description:
-      "该项⽬主要的需求是完成⼀个资产管理的 APP ，主要⽤于管理甲⽅内部的各种资产。",
+      "该项⽬主要的需求是完成⼀个资产管理的 APP ，⽤于管理甲⽅内部的各种资产。有基本的图表数据统计功能。",
     tags: ["React", "TypeScript", "Expo", "React Native", "Redux"],
     imageUrl: "/zcgl.jpg",
   },
