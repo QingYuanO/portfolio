@@ -22,8 +22,8 @@ export const sendEmail = async (formData: FormData) => {
   }
   let data;
   try {
-    data = resend.emails.send({
-      from: "QingYuanO Portfolio Contact Form <onboarding@resend.dev>",
+    data = await resend.emails.send({
+      from: "QingYuanO Portfolio <onboarding@resend.dev>",
       to: "qingyuano@foxmail.com",
       subject: "从个人网站发来的消息：",
       reply_to: senderEmail,
@@ -37,6 +37,6 @@ export const sendEmail = async (formData: FormData) => {
       error: getErrorMessage(error),
     };
   }
-  
-  return data
+
+  return { data };
 };

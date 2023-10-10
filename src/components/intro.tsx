@@ -11,7 +11,7 @@ import { useActiveSectionContext } from "@/context/active-section-context";
 
 export default function Intro() {
   const { ref } = useSectionInView("首页", 1);
-  const {setActiveSection,setTimeOfLastClick} = useActiveSectionContext()
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
   return (
     <section
       ref={ref}
@@ -61,7 +61,8 @@ export default function Intro() {
         Hello，我是<span className="font-bold">QingYuanO</span> 我是一个有{" "}
         <span className="font-bold">四年开发经验</span> 的{" "}
         <span className="font-bold">前端开发工程师。</span> 享受创造
-        <span className="italic">sites & apps</span>，开发过多个中后台以及移动端应用，主要专注于{" "}
+        <span className="italic">sites & apps</span>
+        ，开发过多个中后台以及移动端应用，主要专注于{" "}
         <span className="underline">React</span>。
       </motion.p>
 
@@ -77,15 +78,15 @@ export default function Intro() {
           href="#contact"
           className="group flex items-center gap-2 rounded-full bg-gray-900 px-7 py-3 text-white outline-none transition hover:scale-110 hover:bg-gray-950 focus:scale-110 active:scale-105"
           onClick={() => {
-            setActiveSection("联系我")
-            setTimeOfLastClick(Date.now())
+            setActiveSection("联系我");
+            setTimeOfLastClick(Date.now());
           }}
         >
           联系我{" "}
           <BsArrowRight className="opacity-70 transition group-hover:translate-x-1" />
         </Link>
         <a
-          className="borderBlack group flex cursor-pointer items-center gap-2 rounded-full border border-solid border-black/10 bg-white px-7 py-3 outline-none transition hover:scale-110 focus:scale-110 active:scale-105"
+          className="borderBlack group flex cursor-pointer items-center gap-2 rounded-full border border-solid border-black/10 bg-white px-7 py-3 outline-none transition hover:scale-110 focus:scale-110 active:scale-105 dark:bg-white/10"
           download
         >
           简历{" "}
@@ -94,7 +95,7 @@ export default function Intro() {
         <a
           href="https://github.com/QingYuanO"
           target="_blank"
-          className="flex cursor-pointer items-center justify-center rounded-full border border-solid border-black/10 bg-white p-4 text-[1.35rem] text-gray-700 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-[1.05]"
+          className="flex cursor-pointer items-center justify-center rounded-full border border-solid border-black/10 bg-white p-4 text-[1.35rem] text-gray-700 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-[1.05] dark:bg-white/10 dark:text-white/60"
         >
           <FaGithubSquare />
         </a>

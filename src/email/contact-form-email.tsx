@@ -26,11 +26,11 @@ export default function ContactFormEmail({
       <Head />
       <Preview>来自个人网站的新消息</Preview>
       <Tailwind>
-        <Body className="bg-gray-100 text-black">
+        <Body className="bg-gray-200 text-black">
           <Container>
-            <Section className="bg-white borderBlack my-10 px-10 py-4 rounded-md">
+            <Section className="bg-white shadow shadow-white borderBlack my-10 px-10 py-4 rounded-md">
               <Heading className="leading-tight">
-                您收到了来自个人网站的以下消息
+                来自个人网站的消息：
               </Heading>
               <Text>{message}</Text>
               <Hr />

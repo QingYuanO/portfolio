@@ -3,11 +3,15 @@ import React from "react";
 import SectionHeading from "./section-heading";
 import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
-import { FaPaperPlane } from "react-icons/fa";
 import { sendEmail } from "@/actions/sendEmail";
+import toast from "react-hot-toast";
+
+import SubmitBtn from "./submit-btn";
 
 export default function Contact() {
   const { ref } = useSectionInView("联系我");
+
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -30,7 +34,15 @@ export default function Contact() {
       <form
         className="mt-10 flex flex-col dark:text-black"
         action={async (formData) => {
-          await sendEmail(formData);
+          //ts-ignore
+          const { error } = await sendEmail(formData);
+
+          if (error) {
+            toast.error(error);
+            return;
+          }
+          
+          toast.success("邮件发送成功!");
         }}
       >
         <input
@@ -48,13 +60,7 @@ export default function Contact() {
           required
           maxLength={5000}
         />
-        <button
-          type="submit"
-          className="disabled:bg-opacity-65 group flex h-[3rem] w-[8rem] items-center justify-center gap-2 rounded-full bg-gray-900 text-white outline-none transition-all hover:scale-110 hover:bg-gray-950 focus:scale-110 active:scale-105 disabled:scale-100 dark:bg-white dark:bg-opacity-10"
-        >
-          提交{" "}
-          <FaPaperPlane className="text-xs opacity-70 transition-all group-hover:-translate-y-1 group-hover:translate-x-1" />{" "}
-        </button>
+        <SubmitBtn />
       </form>
     </motion.section>
   );
